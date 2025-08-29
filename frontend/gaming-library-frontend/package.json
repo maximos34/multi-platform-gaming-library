@@ -1,0 +1,38 @@
+{
+  "name": "gaming-library-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for the Gaming Library application",
+  "main": "src/main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "jest"
+  },
+  "keywords": [
+    "gaming",
+    "achievements",
+    "library",
+    "tracking"
+  ],
+  "author": "Gaming Library Team",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@apollo/client": "^4.0.2",
+    "@vitejs/plugin-react": "^5.0.2",
+    "axios": "^1.7.9",
+    "graphql": "^16.11.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.1.3",
+    "vite": "^7.1.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16"
+  }
+}

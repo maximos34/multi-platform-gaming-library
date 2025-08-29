@@ -1,0 +1,12 @@
+# Auto detect text files and perform CRLF normalization on Windows
+* text=auto eol=crlf
+
+# Force specific line endings for certain file types
+*.js text eol=crlf
+*.jsx text eol=crlf
+*.ts text eol=crlf
+*.tsx text eol=crlf
+*.json text eol=crlf
+*.md text eol=crlf
+*.html text eol=crlf
+*.css text eol=crlf

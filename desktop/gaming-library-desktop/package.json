@@ -1,0 +1,42 @@
+{
+  "name": "gaming-library-desktop",
+  "version": "1.0.0",
+  "description": "Desktop application for the Gaming Library",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gaming",
+    "achievements",
+    "library",
+    "tracking",
+    "electron"
+  ],
+  "author": "Gaming Library Team",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.gaminglibrary.app",
+    "productName": "Gaming Library",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

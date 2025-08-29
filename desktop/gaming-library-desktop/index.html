@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <title>Gaming Library</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Helvetica, Arial, sans-serif;
+        background-color: #111827;
+        color: #f9fafb;
+      }
+      
+      #app {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      
+      header {
+        background-color: #1f2937;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .nav-links a {
+        color: #9ca3af;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.2s;
+      }
+      
+      .nav-links a:hover,
+      .nav-links a.active {
+        background-color: #374151;
+        color: #f9fafb;
+      }
+      
+      main {
+        flex: 1;
+        padding: 2rem;
+        overflow-y: auto;
+      }
+      
+      .dashboard {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+      
+      .search-bar {
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #374151;
+        background-color: #1f2937;
+        color: #f9fafb;
+        width: 300px;
+      }
+      
+      .game-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .game-card {
+        background-color: #1f2937;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+      
+      .game-card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .game-cover {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      
+      .game-info {
+        padding: 1rem;
+      }
+      
+      .game-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      
+      .game-platform {
+        color: #9ca3af;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .progress-bar {
+        height: 6px;
+        background-color: #374151;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-bottom: 0.5rem;
+      }
+      
+      .progress-fill {
+        height: 100%;
+        background-color: #3b82f6;
+        border-radius: 3px;
+      }
+      
+      .progress-text {
+        font-size: 0.8rem;
+        color: #9ca3af;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <nav>
+          <div class="logo">Gaming Library</div>
+          <div class="nav-links">
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Games</a>
+            <a href="#">Achievements</a>
+            <a href="#">Profile</a>
+          </div>
+        </nav>
+      </header>
+      
+      <main>
+        <div class="dashboard">
+          <div class="dashboard-header">
+            <h1>My Game Library</h1>
+            <input type="text" class="search-bar" placeholder="Search games..." />
+          </div>
+          
+          <div class="game-grid">
+            <!-- Game Card 1 -->
+            <div class="game-card">
+              <img src="https://via.placeholder.com/300x400/3b82f6/ffffff?text=TW3" alt="The Witcher 3" class="game-cover" />
+              <div class="game-info">
+                <div class="game-title">The Witcher 3: Wild Hunt</div>
+                <div class="game-platform">PC</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 100%"></div>
+                </div>
+                <div class="progress-text">120/120 achievements</div>
+              </div>
+            </div>
+            
+            <!-- Game Card 2 -->
+            <div class="game-card">
+              <img src="https://via.placeholder.com/300x400/ef4444/ffffff?text=CP2077" alt="Cyberpunk 2077" class="game-cover" />
+              <div class="game-info">
+                <div class="game-title">Cyberpunk 2077</div>
+                <div class="game-platform">PC</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 40%"></div>
+                </div>
+                <div class="progress-text">32/80 achievements</div>
+              </div>
+            </div>
+            
+            <!-- Game Card 3 -->
+            <div class="game-card">
+              <img src="https://via.placeholder.com/300x400/10b981/ffffff?text=RDR2" alt="Red Dead Redemption 2" class="game-cover" />
+              <div class="game-info">
+                <div class="game-title">Red Dead Redemption 2</div>
+                <div class="game-platform">PlayStation</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 45%"></div>
+                </div>
+                <div class="progress-text">45/100 achievements</div>
+              </div>
+            </div>
+            
+            <!-- Game Card 4 -->
+            <div class="game-card">
+              <img src="https://via.placeholder.com/300x400/8b5cf6/ffffff?text=Hades" alt="Hades" class="game-cover" />
+              <div class="game-info">
+                <div class="game-title">Hades</div>
+                <div class="game-platform">Nintendo Switch</div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <div class="progress-text">0/60 achievements</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    <script>
+      // You can also require other files to run in this process
+      document.addEventListener('DOMContentLoaded', () => {
+        // Example of using the Electron API
+        window.electronAPI.getAppInfo().then(info => {
+          console.log('App Info:', info);
+        });
+      });
+    </script>
+  </body>
+</html>
