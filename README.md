@@ -68,10 +68,26 @@ A multi-platform application for managing games and tracking achievements across
 ### Prerequisites
 
 - Node.js (v16 or higher)
-- MongoDB
+- Docker and Docker Compose (recommended) OR MongoDB installed locally
 - npm or yarn
 
-### Backend Setup
+### Quick Start with Docker Compose (Recommended)
+
+1. Make sure Docker Desktop is running
+2. From the root directory, start all services:
+   ```bash
+   docker-compose up -d
+   ```
+3. The backend will be available at http://localhost:5000
+4. MongoDB will be available at mongodb://localhost:27017
+
+### Manual Setup
+
+#### MongoDB Setup
+
+Follow the instructions in [MONGODB_SETUP.md](MONGODB_SETUP.md) to set up MongoDB either locally or using MongoDB Atlas.
+
+#### Backend Setup
 
 1. Navigate to the backend directory:
    ```bash
