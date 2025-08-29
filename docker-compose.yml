@@ -10,6 +10,16 @@ services:
     volumes:
       - mongodb_data:/data/db
 
+  init-db:
+    build:
+      context: .
+      dockerfile: Dockerfile.init
+    container_name: gaming-library-init-db
+    depends_on:
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://admin:password@gaming-library-mongodb:27017/gaming-library?authSource=admin
+
   backend:
     build: 
       context: ./backend
@@ -18,7 +28,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - MONGODB_URI=mongodb://admin:password@mongodb:27017/gaming-library?authSource=admin
+      - MONGODB_URI=mongodb://admin:password@gaming-library-mongodb:27017/gaming-library?authSource=admin
       - NODE_ENV=development
     depends_on:
       - mongodb
