@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # EditorConfig is awesome: https://EditorConfig.org
 
 # top-most EditorConfig file
@@ -21,28 +20,4 @@ indent_size = 2
 
 [*.py]
 indent_style = space
-=======
-# EditorConfig is awesome: https://EditorConfig.org
-
-# top-most EditorConfig file
-root = true
-
-# Default settings for all files
-[*]
-charset = utf-8
-end_of_line = crlf
-insert_final_newline = true
-trim_trailing_whitespace = true
-
-# Specific settings for different file types
-[*.md]
-max_line_length = off
-
-[*.{js,jsx,ts,tsx,json}]
-indent_style = space
-indent_size = 2
-
-[*.py]
-indent_style = space
->>>>>>> 7543c830d80040942629e0aaa20beb6e09053829
 indent_size = 4
